@@ -4,7 +4,8 @@
     "scripts": {
         "dev": "vite",
         "db:reset": "php artisan migrate:reset",
-        "build": "tsc && vite build"
+        "build": "tsc && vite build",
+        "pint": "php artisan pint"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
