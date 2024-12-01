@@ -3,6 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "db:reset": "php artisan migrate:reset",
         "build": "tsc && vite build"
     },
     "devDependencies": {
