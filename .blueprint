@@ -1,0 +1,10 @@
+created:
+    - database/factories/UserFactory.php
+    - database/factories/BookingFactory.php
+    - database/migrations/2024_12_02_123600_create_users_table.php
+    - database/migrations/2024_12_02_123601_create_bookings_table.php
+    - app/Models/User.php
+    - app/Models/Booking.php
+models:
+    User: { id: id, name: 'string:100', email: 'string:150 unique', phone: 'string nullable', password: string, email_verified_at: 'timestamp nullable', last_login_at: 'timestamp nullable', softdeletes: softDeletes, timestamps: timestamps, relationships: { belongsTo: User, hasMany: Booking } }
+    Booking: { id: id, user_id: 'foreignId:users', room_type: 'enum:single,double,suite,family,deluxe', check_in_date: date, check_out_date: date, total_guests: integer, total_price: 'decimal(10,2)', booking_status: 'enum:pending,confirmed,checked_in,checked_out,cancelled default:pending', softdeletes: softDeletes, timestamps: timestamps, relationships: { belongsTo: User } }

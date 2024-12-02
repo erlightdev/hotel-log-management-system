@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         // Loop through and create each user
         foreach ($users as $userData) {
-            User::factory()->create($userData);
+            User::create($userData);
         }
     }
 }
